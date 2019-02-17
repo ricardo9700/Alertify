@@ -18,8 +18,8 @@ public class InicioActiv extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            FragmentManager fm=getSupportFragmentManager();
-            FragmentTransaction transaction=fm.beginTransaction();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
             switch (item.getItemId()) {
                 //REEMPLAZAR CODIGO CON EL DEL FRAGMENTO PROPIO
                 case R.id.navigation_inicio:
@@ -29,11 +29,16 @@ public class InicioActiv extends AppCompatActivity {
                     mTextMessage.setText(R.string.title_mapa);
                     return true;
                 case R.id.navigation_reportes:
-                    mTextMessage.setText(R.string.title_reportes);
+                    mTextMessage.setText("");
+                    ReporteFrag fragReporte = new ReporteFrag();
+                    transaction.replace(R.id.contFrag,fragReporte);
+                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
                 case R.id.navigation_guia:
                     mTextMessage.setText(R.string.title_guia);
-                    GuiaFrag fragGuia=new GuiaFrag();
+                    GuiaFrag fragGuia = new GuiaFrag();
                     transaction.replace(R.id.contFrag,fragGuia);
                     transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
                     transaction.addToBackStack(null);
