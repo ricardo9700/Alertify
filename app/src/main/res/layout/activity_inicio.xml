@@ -17,7 +17,7 @@
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+        app:layout_constraintTop_toBottomOf="@+id/et_Alertify">
 
     </FrameLayout>
 
@@ -36,15 +36,16 @@
     </android.support.design.widget.BottomNavigationView>
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/et_Alertify"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/Alertify"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

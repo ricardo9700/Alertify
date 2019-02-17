@@ -54,7 +54,7 @@ public class InicioActiv extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        mTextMessage = (TextView) findViewById(R.id.tvTitle);
+        mTextMessage = (TextView) findViewById(R.id.et_Alertify);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
