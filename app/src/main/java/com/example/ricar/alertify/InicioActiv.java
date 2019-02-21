@@ -24,12 +24,22 @@ public class InicioActiv extends AppCompatActivity {
                 //REEMPLAZAR CODIGO CON EL DEL FRAGMENTO PROPIO
                 case R.id.navigation_inicio:
                     mTextMessage.setText(R.string.title_inicio);
+                    BotonFrag fragBoton = new BotonFrag();
+                    transaction.replace(R.id.contFrag,fragBoton);
+                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
                 case R.id.navigation_mapa:
                     mTextMessage.setText(R.string.title_mapa);
+                    MapaFrag fragMapa = new MapaFrag();
+                    transaction.replace(R.id.contFrag,fragMapa);
+                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
                 case R.id.navigation_reportes:
-                    mTextMessage.setText("");
+                    mTextMessage.setText(R.string.title_reportes);
                     ReporteFrag fragReporte = new ReporteFrag();
                     transaction.replace(R.id.contFrag,fragReporte);
                     transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);

@@ -1,4 +1,4 @@
-package com.example.botonpanico;
+package com.example.ricar.alertify;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.ActionBar;
