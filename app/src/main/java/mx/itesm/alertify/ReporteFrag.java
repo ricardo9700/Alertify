@@ -19,9 +19,7 @@ public class ReporteFrag extends Fragment {
     public ReporteFrag() {
         // Required empty public constructor
     }
-
-    // Hola
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
