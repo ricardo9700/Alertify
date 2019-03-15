@@ -19,5 +19,9 @@
         android:id="@+id/navigation_guia"
         android:icon="@android:drawable/ic_dialog_info"
         android:title="@string/title_guia" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/title_settings" />
 
 </menu>

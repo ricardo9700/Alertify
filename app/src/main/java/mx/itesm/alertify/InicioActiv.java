@@ -1,6 +1,7 @@
 package mx.itesm.alertify;
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
@@ -22,6 +23,7 @@ public class InicioActiv extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
+
             switch (item.getItemId()) {
                 //REEMPLAZAR CODIGO CON EL DEL FRAGMENTO PROPIO
                 case R.id.navigation_inicio:
@@ -49,9 +51,15 @@ public class InicioActiv extends AppCompatActivity {
                     transaction.commit();
                     return true;
                 case R.id.navigation_guia:
-                    mTextMessage.setText(R.string.title_guia);
                     GuiaFrag fragGuia = new GuiaFrag();
                     transaction.replace(R.id.contFrag,fragGuia);
+                    transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                    return true;
+                case R.id.navigation_settings:
+                    SettingsFrag fragSettings = new SettingsFrag();
+                    transaction.replace(R.id.contFrag,fragSettings);
                     transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
                     transaction.addToBackStack(null);
                     transaction.commit();
@@ -69,6 +77,15 @@ public class InicioActiv extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.et_Alertify);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        mTextMessage.setText(R.string.title_inicio);
+        BotonFrag fragBoton = new BotonFrag();
+        transaction.replace(R.id.contFrag,fragBoton);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
 }
