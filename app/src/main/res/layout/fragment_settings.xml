@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Switch
+                android:id="@+id/call_911"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Llamar a 911"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Switch
+                android:id="@+id/call_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Llamar a "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:text="AÑADIR NUEVO CONTACTO"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Añadir" />
+
+            <ListView
+                android:id="@+id/listContacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
