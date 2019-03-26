@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
@@ -10,12 +11,20 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Switch
                 android:id="@+id/call_911"
@@ -31,6 +40,30 @@
                 android:text="Llamar a "
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+            <EditText
+                android:id="@+id/etNombrePrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical|center"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etNumeroPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical|center"
+                android:hint="Número"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/addPrincipContactButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar Contacto Princial" />
+
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
@@ -39,17 +72,104 @@
                 android:text="AÑADIR NUEVO CONTACTO"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical|center"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical|center"
+                android:hint="Número"
+                android:inputType="phone" />
+
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/addNewContactButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Añadir" />
 
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:text="CONTACTOS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
             <ListView
                 android:id="@+id/listContacts"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent" >
+
+            </ListView>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:text="MENSAJE DE AYUDA"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <EditText
+                android:id="@+id/etMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Máximo 200 caracteres"
+                android:inputType="textMultiLine"
+                android:maxLength="200" />
+
+            <Button
+                android:id="@+id/saveMessageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Mensaje" />
+
+            <Switch
+                android:id="@+id/useWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Envíar por WhatsApp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Switch
+                android:id="@+id/useTelegram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Envíar por Telegram"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Switch
+                android:id="@+id/useMensajes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Envíar por App de Mensajes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center"
+                android:text="LOCALIZACIÓN"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <Switch
+                android:id="@+id/sendLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compartir Localización"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
